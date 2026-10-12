@@ -1,0 +1,21 @@
+[
+  {
+    "id": "programming-champion-2026",
+    "title": "Programming Champion",
+    "value": "Java contest winner · April 2026",
+    "description": "Won the programming contest organized by Cumilla Polytechnic Institute."
+  },
+  {
+    "id": "icpc-asia-dhaka-2025",
+    "title": "ICPC Asia Dhaka Regional",
+    "value": "2025 participant",
+    "description": "Competed in the regional programming contest, solving problems collaboratively as a team."
+  },
+  {
+    "id": "competitive-programming",
+    "title": "Competitive Programming",
+    "value": "300+ problems solved",
+    "description": "Maximum ratings: 1015 on Codeforces and 1418 on CodeChef, with a focus on data structures and time complexity.",
+    "url": "https://codeforces.com/profile/yeasin321"
+  }
+]

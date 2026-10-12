@@ -1,0 +1,36 @@
+{
+  "name": "ahad-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "node scripts/seed.mjs",
+    "db:seed:sql": "node scripts/export-seed-sql.mjs"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "dotenv": "^18.0.7",
+    "drizzle-orm": "^0.45.4",
+    "next": "^16.0.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.6.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "drizzle-kit": "^0.31.11",
+    "eslint": "^10.0.0",
+    "eslint-config-next": "^16.0.0",
+    "postcss": "^8.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.0"
+  }
+}

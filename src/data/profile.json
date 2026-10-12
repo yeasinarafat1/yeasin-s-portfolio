@@ -1,0 +1,27 @@
+{
+  "name": "Yeasin Arafat",
+  "greeting": "Hello, I'm",
+  "role": "Computer Science Student & Full-Stack Developer",
+  "tagline": "Building useful products with thoughtful engineering.",
+  "description": "I build full-stack web applications with Next.js, PostgreSQL, and Drizzle ORM, and enjoy solving algorithmic problems with clean, maintainable code.",
+  "location": "Cumilla, Bangladesh",
+  "email": "developer.yeasinarafat@gmail.com",
+  "phone": "01572938175",
+  "resumeUrl": "/Yeasin-Arafat-CV.pdf",
+  "illustration": "/images/developer.svg",
+  "languages": [
+    { "name": "Bengali", "proficiency": "Native" },
+    { "name": "English", "proficiency": "Professional Working Proficiency" }
+  ],
+  "about": {
+    "body": "I'm a Computer Science & Engineering student at Cumilla Polytechnic Institute, currently in my 7th semester, and a full-stack developer focused on building useful, well-structured web applications.",
+    "interests": ["Full-stack development", "Algorithmic problem-solving", "Database design", "Clean architecture"],
+    "seeking": "I'm seeking an internship where I can apply strong engineering practices and contribute to real-world software projects."
+  },
+  "contactMessage": "I'm currently seeking an internship and would be glad to connect about software development opportunities, projects, or collaboration.",
+  "socialLinks": [
+    { "id": "linkedin", "label": "LinkedIn", "url": "https://www.linkedin.com/in/yeasinarafat27/" },
+    { "id": "github", "label": "GitHub", "url": "https://github.com/yeasinarafat1" },
+    { "id": "codeforces", "label": "Codeforces", "url": "https://codeforces.com/profile/yeasin321" }
+  ]
+}

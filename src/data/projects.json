@@ -1,0 +1,50 @@
+[
+  {
+    "id": "bookbazar",
+    "title": "BookBazar",
+    "category": "Student marketplace",
+    "description": "A full-stack second-hand textbook marketplace for polytechnic students, with listings filtered by category, semester, and department.",
+    "contribution": "Designed a four-step QR handoff to help prevent transaction fraud, with role-based access, listing moderation, seller dashboards, and digital receipts.",
+    "technologies": ["Next.js", "TypeScript", "Neon PostgreSQL", "Drizzle ORM", "Clerk"],
+    "image": "/images/bookbazar.svg",
+    "liveUrl": "https://book-bazar-phi.vercel.app/",
+    "sourceUrl": "https://github.com/yeasinarafat1/BookBazar",
+    "featured": true
+  },
+  {
+    "id": "codeshare-demo",
+    "title": "CodeShare",
+    "category": "Demo concept",
+    "demo": true,
+    "description": "A concept for saving, organizing, and sharing reusable code snippets.",
+    "technologies": ["Next.js", "TypeScript", "PostgreSQL"],
+    "image": "/images/codeshare.svg",
+    "liveUrl": "",
+    "sourceUrl": "",
+    "featured": true
+  },
+  {
+    "id": "contactvault-demo",
+    "title": "ContactVault",
+    "category": "Demo concept",
+    "demo": true,
+    "description": "A browser-based concept for keeping personal contacts organized.",
+    "technologies": ["JavaScript", "IndexedDB", "Vite"],
+    "image": "/images/contactvault.svg",
+    "liveUrl": "",
+    "sourceUrl": "",
+    "featured": true
+  },
+  {
+    "id": "taskflow-demo",
+    "title": "TaskFlow",
+    "category": "Demo concept",
+    "demo": true,
+    "description": "A lightweight kanban board concept for planning tasks across a small project team.",
+    "technologies": ["React.js", "TypeScript", "Tailwind CSS"],
+    "image": "/images/project-preview.svg",
+    "liveUrl": "",
+    "sourceUrl": "",
+    "featured": true
+  }
+]

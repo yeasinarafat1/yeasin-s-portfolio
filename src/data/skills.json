@@ -1,0 +1,27 @@
+[
+  {
+    "id": "frontend",
+    "title": "Frontend",
+    "items": ["React.js", "Next.js", "Tailwind CSS"]
+  },
+  {
+    "id": "backend",
+    "title": "Backend",
+    "items": ["Node.js", "Express.js", "REST APIs"]
+  },
+  {
+    "id": "database",
+    "title": "Databases",
+    "items": ["PostgreSQL", "Drizzle ORM"]
+  },
+  {
+    "id": "languages",
+    "title": "Programming Languages",
+    "items": ["C++", "TypeScript", "JavaScript", "Python", "SQL", "Java"]
+  },
+  {
+    "id": "tools",
+    "title": "Tools",
+    "items": ["Git", "GitHub", "Linux (Ubuntu/Arch)"]
+  }
+]
