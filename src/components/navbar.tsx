@@ -5,18 +5,20 @@ import { useEffect, useRef, useState } from "react";
 interface NavbarProps {
   name: string;
   visibleSections: string[];
+  isNowPage?: boolean;
 }
 
 const navigation = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "#home", section: "home" },
+  { label: "About", href: "#about", section: "about" },
+  { label: "Projects", href: "#projects", section: "projects" },
+  { label: "Skills", href: "#skills", section: "skills" },
+  { label: "Education", href: "#education", section: "education" },
+  { label: "Now", href: "/now", section: "now" },
+  { label: "Contact", href: "#contact", section: "contact" },
 ];
 
-export function Navbar({ name, visibleSections }: NavbarProps) {
+export function Navbar({ name, visibleSections, isNowPage = false }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -65,15 +67,20 @@ export function Navbar({ name, visibleSections }: NavbarProps) {
       className={`site-header${isScrolled ? " site-header--scrolled" : ""}${isHidden ? " site-header--hidden" : ""}`}
     >
       <nav className="nav-inner" aria-label="Main navigation">
-        <a className="wordmark" href="#top" aria-label={`${name}, back to top`}>
+        <a className="wordmark" href={isNowPage ? "/" : "#top"} aria-label={`${name}, ${isNowPage ? "home" : "back to top"}`}>
           <span aria-hidden="true">&lt;/</span>{name}<span className="wordmark-dot text-coral">&gt;</span>
         </a>
         <ul id="primary-navigation" className={`nav-links${isMenuOpen ? " nav-links--open" : ""}`}>
-          {navigation.filter((item) => item.href === "#home" || item.href === "#contact" || visibleSections.includes(item.href.slice(1))).map((item) => (
-            <li key={item.href}><a href={item.href} onClick={() => setIsMenuOpen(false)}>{item.label}</a></li>
-          ))}
+          {navigation.filter((item) => item.section === "home" || item.section === "contact" || item.section === "now" || visibleSections.includes(item.section)).map((item) => {
+            const href = isNowPage && item.section !== "now"
+              ? item.section === "home" ? "/" : `/#${item.section}`
+              : item.href;
+            return (
+              <li key={item.href}><a href={href} aria-current={isNowPage && item.section === "now" ? "page" : undefined} onClick={() => setIsMenuOpen(false)}>{item.label}</a></li>
+            );
+          })}
         </ul>
-        <a className="nav-cta" href="#contact" onClick={() => setIsMenuOpen(false)}>Let&apos;s Talk <span aria-hidden="true">↗</span></a>
+        <a className="nav-cta" href={isNowPage ? "/#contact" : "#contact"} onClick={() => setIsMenuOpen(false)}>Let&apos;s Talk <span aria-hidden="true">↗</span></a>
         <button
           className="nav-toggle"
           type="button"

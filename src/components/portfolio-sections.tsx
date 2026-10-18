@@ -177,7 +177,7 @@ export function ContactSection({ profile }: { profile: Profile }) {
   );
 }
 
-export function Footer({ profile, visibleSections, hasResume }: { profile: Profile; visibleSections: string[]; hasResume: boolean }) {
+export function Footer({ profile, visibleSections, hasResume, isNowPage = false }: { profile: Profile; visibleSections: string[]; hasResume: boolean; isNowPage?: boolean }) {
   const year = new Date().getFullYear();
   const email = safeEmail(profile.email);
   const footerSections = [
@@ -185,14 +185,15 @@ export function Footer({ profile, visibleSections, hasResume }: { profile: Profi
     { id: "projects", label: "Projects" },
     { id: "skills", label: "Skills" },
     { id: "education", label: "Education" },
+    { id: "now", label: "Now" },
     { id: "contact", label: "Contact" },
-  ].filter((section) => section.id === "contact" || visibleSections.includes(section.id));
+  ].filter((section) => section.id === "contact" || section.id === "now" || visibleSections.includes(section.id));
 
   return (
     <footer className="site-footer">
       <div className="footer-main">
         <div className="footer-brand">
-          <a className="footer-wordmark" href="#top">{profile.name}<span>.</span></a>
+          <a className="footer-wordmark" href={isNowPage ? "/" : "#top"}>{profile.name}<span>.</span></a>
           <p>{profile.role} based in {profile.location}.</p>
           <p className="footer-availability">Currently seeking an internship opportunity.</p>
         </div>
@@ -200,7 +201,7 @@ export function Footer({ profile, visibleSections, hasResume }: { profile: Profi
           <h2>Explore</h2>
           <ul>
             {footerSections.map((section) => (
-              <li key={section.id}><a href={`#${section.id}`}>{section.label}</a></li>
+              <li key={section.id}><a href={section.id === "now" ? "/now" : isNowPage ? `/#${section.id}` : `#${section.id}`}>{section.label}</a></li>
             ))}
           </ul>
         </nav>
